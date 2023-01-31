@@ -1,9 +1,11 @@
 import express from 'express'
 import jwt from 'jsonwebtoken'
+import cors from 'cors'
 const key = "disjids"
 
 const app = express()
 app.use(express.json())
+app.use(cors())
 
 const credentials = {
     email: 'contato@type.dev.br',
