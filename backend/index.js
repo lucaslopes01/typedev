@@ -16,7 +16,9 @@ app.post('/auth', (req, res) => {
     const { email, senha } = req.body;
     if (email === credentials.email && senha === credentials.senha) {
         return res.status(200).json({
+            
             token: jwt.sign({ 
+                
 
                 email,
                 role: 'admin'
