@@ -1,7 +1,7 @@
 import express from 'express'
 import jwt from 'jsonwebtoken'
 import cors from 'cors'
-const key = "disjids"
+ export const key = "disjids"
 
  export const app = express()
 app.use(express.json())
@@ -25,7 +25,7 @@ function getUser(email) {
     return users.find(user => user.email === email)
 }
 
-function isaAuthenticated(req, resp, next) {
+function isaAuthenticated(req, res, next) {
 
 
     try {

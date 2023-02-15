@@ -31,3 +31,16 @@ it (' should not be able to authenticate if the password is wrong', async () =>{
       expect(response.status).toEqual(401)
       expect(response.body.error).toEqual('Authentication data error')
 })
+it (' should not be able to authenticate if the user does not have authorization', async () =>{
+   const credentials ={
+      email: 'rodrigo@type.dev.br',
+      senha: '123456'
+   }
+   
+      const response = await request(app)
+      .post('/auth')
+      .send(credentials)
+      
+      expect(response.status).toEqual(403)
+      expect(response.body.error).toEqual('User not authorized')
+})
