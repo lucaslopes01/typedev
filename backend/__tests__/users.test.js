@@ -5,7 +5,7 @@ import Jwt from "jsonwebtoken"
 
 let token;
 beforeAll(() => {
-  token = Jwt.sign({}, key);
+  token = Jwt.sign({}, process.env.JWT_TOKEN);
 });
 
 it("should be able to list users", async () => {
