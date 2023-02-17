@@ -1,7 +1,7 @@
 import express from 'express'
 import cors from 'cors'
-import { authRouter } from './routers/auth.route'
-import { usersRouter } from './routers/users.route'
+import { authRouter } from './routers/auth.route.js'
+import { usersRouter } from './routers/users.route.js'
  
 
  export const app = express()

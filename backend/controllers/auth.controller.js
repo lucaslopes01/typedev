@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken'
-import { getUser } from '../repositories/user.repository';
+import { getUser } from '../repositories/user.repository.js';
 
 
 export function authenticate(req, res)  {
