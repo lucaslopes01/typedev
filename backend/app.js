@@ -1,5 +1,6 @@
 import express from 'express'
 import cors from 'cors'
+import './mongodb.js'
 import { authRouter } from './routers/auth.route.js'
 import { usersRouter } from './routers/users.route.js'
  
